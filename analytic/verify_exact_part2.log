@@ -1,0 +1,42 @@
+40 intervals from 16000000 to 1387721000
+[16000000, 16160000] previously verified (resume)
+[16160000, 16402400] previously verified (resume)
+[16402400, 16586930] previously verified (resume)
+[16586930, 16866830] previously verified (resume)
+[16866830, 17293770] previously verified (resume)
+[17293770, 17622080] previously verified (resume)
+[17622080, 18123900] previously verified (resume)
+[18123900, 18510980] previously verified (resume)
+[18510980, 19104000] previously verified (resume)
+[19104000, 20022030] previously verified (resume)
+[20022030, 20743640] previously verified (resume)
+[20743640, 21865060] previously verified (resume)
+[21865060, 22751590] previously verified (resume)
+[22751590, 24135310] previously verified (resume)
+[24135310, 26337120] previously verified (resume)
+[26337120, 28139130] previously verified (resume)
+[28139130, 31027090] exact B3/a = 0.039409 OK
+[31027090, 33415360] exact B3/a = 0.038360 OK
+[33415360, 37273510] exact B3/a = 0.039160 OK
+[37273510, 40501210] exact B3/a = 0.037753 OK
+[40501210, 45762030] exact B3/a = 0.038687 OK
+[45762030, 50220150] exact B3/a = 0.037195 OK
+[50220150, 57558790] exact B3/a = 0.038354 OK
+[57558790, 63867070] exact B3/a = 0.036795 OK
+[63867070, 74366540] exact B3/a = 0.038116 OK
+[74366540, 83535690] exact B3/a = 0.036732 OK
+[83535690, 98985200] exact B3/a = 0.038191 OK
+[98985200, 112715300] exact B3/a = 0.036325 OK
+[112715300, 136167200] exact B3/a = 0.038007 OK
+[136167200, 157415800] exact B3/a = 0.036034 OK
+[157415800, 194262300] exact B3/a = 0.038224 OK
+[194262300, 228365700] exact B3/a = 0.036077 OK
+[228365700, 288501200] exact B3/a = 0.038494 OK
+[288501200, 345479400] exact B3/a = 0.036792 OK
+[345479400, 447826400] exact B3/a = 0.039484 OK
+[447826400, 547326600] exact B3/a = 0.037018 OK
+[547326600, 729738000] exact B3/a = 0.039972 OK
+[729738000, 912141700] exact B3/a = 0.037346 OK
+[912141700, 1083139000] exact B3/a = 0.035302 OK
+[1083139000, 1387721000] exact B3/a = 0.037834 OK
+ALL INTERVALS VERIFIED EXACTLY

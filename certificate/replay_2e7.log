@@ -1,0 +1,18 @@
+N=20000000: 299 small roots, 521 large hits, prep 1.8s
+OK through N=10000000: ncol=400000=M(N); |V|=1051583; tests18=3019122 aug=400000 testsOut=550436 scans=0; 7s
+OK through N=20000000: ncol=800000=M(N); |V|=2103229; tests18=6028074 aug=800000 testsOut=1102078 scans=0; 18s
+CERTIFIED: omega(G_N) <= M(N) for all N <= 20000000
+ops saved
+vertex set built in 196s; ops=3180500
+  replayed through x=1901857 (345s)
+  replayed through x=3803657 (493s)
+  replayed through x=5705382 (651s)
+  replayed through x=7607357 (904s)
+  replayed through x=9509391 (1115s)
+  replayed through x=11411127 (1335s)
+  replayed through x=13313036 (1521s)
+  replayed through x=15214831 (1702s)
+  replayed through x=17116782 (1875s)
+  replayed through x=19018507 (2046s)
+REPLAY VERIFIED N=20000000: 2103229 insertions; classes = M(x) after every insertion; 2138s
+EXIT 0
