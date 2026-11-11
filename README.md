@@ -53,4 +53,4 @@ To regenerate the operation log from scratch rather than replaying the stored on
 
 - Problem: P. Erdős (see erdosproblems.com/848 for the original source).
 - Asymptotic solution: M. Sawhney. Explicit threshold: N. Sothanaphan (unrefereed note, 2026). Both are cited, not reproduced.
-- This proof: **[SOLVER NAME]**. It was produced with substantial assistance from Anthropic's Claude (several Claude Code sessions, 2026-11-10), which generated the lemmas, code and certificates and cross-audited each other's work. It has not yet been refereed by a human mathematician.
+- This proof: **Will Howe**, using Claude Opus 5.5. It was produced with substantial assistance from Anthropic's Claude (several Claude Code sessions, 2026-11-10), which generated the lemmas, code and certificates and cross-audited each other's work. It has not yet been refereed by a human mathematician.
