@@ -14,7 +14,7 @@ Sawhney proved the statement for all sufficiently large N, with an ineffective t
 |---|---|---|
 | 1 ≤ N ≤ 2·10⁷ | Explicit proper colouring of the "ab+1 not squarefree" graph with ⌊(N+18)/25⌋ colours, maintained by augmenting-path repairs | `certificate/replay_verify2.py` replays the full operation log `certificate/ops_20000000.bin` (2,103,229 insertions). It uses sympy only and shares no code with the generator. Log: `certificate/replay_2e7.log` |
 | 1.6·10⁷ ≤ N ≤ 1.388·10⁹ | Explicit counting bound (lemmas S1–S3, below 1/25 of N) | `analytic/verify_exact.py`: 40 contiguous intervals in exact rational arithmetic. Logs: `analytic/verify_exact_part1.log`, `analytic/verify_exact_part2.log` |
-| 1.3·10⁹ ≤ N ≤ 1.219·10¹⁹ | Sharper explicit bound (bound3L) | `analytic/verify_exactL.py`: 101/101 intervals, exact rationals (worst case 0.039961 < 0.04). Log: `analytic/verify_exactL.log` |
+| 1.3·10⁹ ≤ N ≤ 1.218524·10¹⁹ | Sharper explicit bound (bound3L) | `analytic/verify_exactL.py`: 101/101 intervals, exact rationals (worst case 0.039961 < 0.04). Log: `analytic/verify_exactL.log` |
 | N ≥ 10¹⁹ | Closed-form tail bound | `analytic/tail_exact.py`: mpmath interval arithmetic, "CERTIFIED OK" (C₁ = 0.031496) |
 
 The ranges overlap, so every N is covered. The full argument is in **[FULL_PROOF.md](FULL_PROOF.md)**. Lemma proofs are in `notes/02_lemmas.md` and `analytic/01_sharpened_lemmas.md`, and the chain of ranges is in `analytic/PROOF_CHAIN.md`.
@@ -44,6 +44,8 @@ To regenerate the operation log from scratch rather than replaying the stored on
 - A second certificate method (`small_n_check/`, a different builder and a sympy-only verifier) independently confirms the bound for every N ≤ 99,981.
 - Lemmas S1, S2, S3, C1′ and S5 and the exact verifiers were each audited by a session that did not write them: `notes/04_audit_threshold_S123.md`.
 - Sothanaphan's explicit-threshold note was audited, and no error was found: `analytic/00_audit_sothanaphan.md`.
+- A fresh case-by-case audit of the full proof against the literal statement found no logical gap and repaired six documentation slips: `notes/05_audit_vs_statement.md`. The proof covers the problem as stated (a = b allowed); it does not cover the variant restricted to distinct pairs.
+- A fresh case-by-case audit of the full proof against the literal statement found no logical gap and repaired six documentation slips: `notes/05_audit_vs_statement.md`. The proof covers the problem as stated (a = b allowed); it does not cover the variant restricted to distinct pairs.
 
 ## Relation to JSP PR #4667
 

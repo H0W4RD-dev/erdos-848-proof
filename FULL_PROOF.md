@@ -64,16 +64,20 @@ Status labels: PROVED (a proof is written here or in the cited note), COMPUTER (
   - C3: A* = ∅, with sub-cases by parity and residues mod 4.
   - Each sub-case bounds |A| by a sum of S1/Q/J bounds (explicit list in threshold/01 §S3).
 - **Monotone bound.** Every term is nondecreasing in N, and parameters range over fixed grids. So B(N1) < N0/25 − 1 certifies all N ∈ [N0, N1].
+- **Tail remark (notes/05_audit_vs_statement.md, G1, G2, G5).**
+  - The N ≥ 10¹⁹ formula uses the 5 ∤ b form of C1. The 5 | b form (0 + 23 classes) is dominated, because X_p ≤ sb_p once (N/(25p²)+1)(1−δ_p) ≥ 15, which holds for N ≥ 10¹⁹ and p ≤ 1000.
+  - Robin's bound is applied to b ≤ N through the monotonicity of ln t/lnln t for t ≥ 16; smaller b have ω ≤ 2.
+  - The 02 C3 total is valid because 4W100 ≤ cls + 3W100 + W25′.
 
 ## 3. Proof chain (every range certified; overlaps shown)
 | Range | Certified by | Arithmetic | Status |
 | --- | --- | --- | --- |
 | 1 ≤ N ≤ 2·10⁷ | §1 colouring certificate; replay_verify2.py (replay_2e7.log) | integers, sympy | **DONE** |
 | 1.6·10⁷ ≤ N ≤ 1.387721·10⁹ | B3 (bound3.py), 40 intervals; exact: threshold/verify_exact.py → verify_exact_part1/2.log "ALL INTERVALS VERIFIED EXACTLY" | exact rationals | **DONE** (verifier audited in 04; spot re-check below) |
-| 1.3·10⁹ ≤ N ≤ 1.219·10¹⁹ | B3L (bound3L.py), 101 intervals (coverL_13e8_12e19.log); exact: threshold/verify_exactL.py → verify_exactL.log "ALL INTERVALS VERIFIED EXACTLY" (101/101 OK, contiguous) | exact rationals | **DONE** |
+| 1.3·10⁹ ≤ N ≤ 1.218524·10¹⁹ | B3L (bound3L.py), 101 intervals (coverL_13e8_12e19.log); exact: threshold/verify_exactL.py → verify_exactL.log "ALL INTERVALS VERIFIED EXACTLY" (101/101 OK, contiguous) | exact rationals | **DONE** |
 | N ≥ 10¹⁹ | closed form αN + β(N), β(N)/N decreasing (notes/03_analytic_range.md); analytic/tail_bound.py; interval-certified by analytic/tail_exact.py "CERTIFIED OK" | mpmath intervals + exact prime sums | **DONE** |
 
-The overlaps are 1.6·10⁷ < 2·10⁷, 1.3·10⁹ < 1.3877·10⁹ and 10¹⁹ < 1.219·10¹⁹. **Every N ≥ 1 is covered.** ∎
+The overlaps are 1.6·10⁷ < 2·10⁷, 1.3·10⁹ < 1.3877·10⁹ and 10¹⁹ < 1.218524·10¹⁹. **Every N ≥ 1 is covered.** ∎
 
 The exact logs were checked for tiling: the 40 intervals of [1.6e7, 1.387721e9] are contiguous; 16 of them were verified in part1 and resumed in part2. The 101 intervals of [1.3e9, 1.218524e19] are contiguous with no failures.
 
@@ -93,4 +97,5 @@ Independent spot re-check (spot_exact.py; my own exact implementation of S1–S3
 - 04_audit_threshold_S123.md: Lemmas S1–S3, C1′ and S5 **CORRECT**. bound3/bound3L, verify_exact(L) and tail_exact **CORRECT** (code review plus brute-force checks).
 - test_sqfree.py: the numba squarefree routine agrees with sympy on 5700 adversarial inputs.
 - lemma_check.py, j_check.py, audit_S12.py, audit_roots.py: lemma bounds dominate brute-force counts; root counts are exact.
+- **Audit against the literal statement (2026-11-11):** notes/05_audit_vs_statement.md. No logical gap; 6 documentation slips repaired (G1–G6). The distinct-pairs variant (a ≠ b only) is **not** covered by this proof.
 - **Remaining caveat:** the large computations are machine-checked (exact or interval arithmetic, independently replayed or re-implemented where stated) but not human-refereed.
