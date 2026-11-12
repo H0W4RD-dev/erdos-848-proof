@@ -34,7 +34,7 @@ So this work can only serve as an independent check of #4667; whether to finish 
 1. N ≤ 7.1e8: the colouring certificate of jsp-elementary-nt (stopped at 7.1e8).
 2. [1.6e7, 1.388e9]: this side's B3 cover (Lemmas S1–S3 + 02 base lemmas).
 3. [1e9, 7.96e13]: analytic2 cover (stopped at 7.957575e13).
-4. N ≥ 1e19: `../tail_bound.py` closed form + monotonicity (`../03_analytic_range.md`). I re-ran it: C1 = 0.0315 at 1e19, 1e21 and 1e30. I checked the β(N)/N decreasing argument.
+4. N ≥ 1e19: `tail_bound.py` closed form + monotonicity (`../notes/03_analytic_range.md`). I re-ran it: C1 = 0.0315 at 1e19, 1e21 and 1e30. I checked the β(N)/N decreasing argument.
 
 **Remaining gap: [7.96e13, 1e19] is uncovered by any interval run.** Every point tested there passes at ≈ 0.030.
 Closing it is about 1 h of `analytic2.py cover 7.9e13 1e19 0.2`. bound3 would also do it, but its sieve cap PLIM = 6e7 limits P1, so it would need extending.

@@ -41,7 +41,7 @@ Status labels: PROVED (a proof is written here or in the cited note), COMPUTER (
     4. the insertion order is exactly V.
   - Log: replay_2e7.log, "REPLAY VERIFIED N=20000000".
   - The verifier was mutation-tested: corrupted logs are rejected.
-- Additionally, colour4.py certified N ≤ 7.1·10⁸ with in-code checks only (cert_1e9.log). It is **not needed** for the chain.
+- Additionally, colour4.py certified N ≤ 7.1·10⁸ with in-code checks only (certificate/cert_1e9.log). It is **not needed** for the chain.
 
 ## 2. Lemmas for the analytic ranges (PROVED; full proofs in 02_lemmas.md and threshold/01_sharpened_lemmas.md; audited in 04_audit_threshold_S123.md)
 - **R.** For b = 2^v m with m odd, #{y mod b : y² ≡ u} ≤ c_v ∏_{p|m}(1 + (u/p)), where (c_0, …, c_3) = (1, 1, 2, 4).
@@ -71,7 +71,7 @@ Status labels: PROVED (a proof is written here or in the cited note), COMPUTER (
 | 1 ≤ N ≤ 2·10⁷ | §1 colouring certificate; replay_verify2.py (replay_2e7.log) | integers, sympy | **DONE** |
 | 1.6·10⁷ ≤ N ≤ 1.387721·10⁹ | B3 (bound3.py), 40 intervals; exact: threshold/verify_exact.py → verify_exact_part1/2.log "ALL INTERVALS VERIFIED EXACTLY" | exact rationals | **DONE** (verifier audited in 04; spot re-check below) |
 | 1.3·10⁹ ≤ N ≤ 1.219·10¹⁹ | B3L (bound3L.py), 101 intervals (coverL_13e8_12e19.log); exact: threshold/verify_exactL.py → verify_exactL.log "ALL INTERVALS VERIFIED EXACTLY" (101/101 OK, contiguous) | exact rationals | **DONE** |
-| N ≥ 10¹⁹ | closed form αN + β(N), β(N)/N decreasing (03_analytic_range.md); tail_bound.py; interval-certified by threshold/tail_exact.py "CERTIFIED OK" | mpmath intervals + exact prime sums | **DONE** |
+| N ≥ 10¹⁹ | closed form αN + β(N), β(N)/N decreasing (notes/03_analytic_range.md); analytic/tail_bound.py; interval-certified by analytic/tail_exact.py "CERTIFIED OK" | mpmath intervals + exact prime sums | **DONE** |
 
 The overlaps are 1.6·10⁷ < 2·10⁷, 1.3·10⁹ < 1.3877·10⁹ and 10¹⁹ < 1.219·10¹⁹. **Every N ≥ 1 is covered.** ∎
 
