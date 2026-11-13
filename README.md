@@ -45,7 +45,6 @@ To regenerate the operation log from scratch rather than replaying the stored on
 - Lemmas S1, S2, S3, C1′ and S5 and the exact verifiers were each audited by a session that did not write them: `notes/04_audit_threshold_S123.md`.
 - Sothanaphan's explicit-threshold note was audited, and no error was found: `analytic/00_audit_sothanaphan.md`.
 - A fresh case-by-case audit of the full proof against the literal statement found no logical gap and repaired six documentation slips: `notes/05_audit_vs_statement.md`. The proof covers the problem as stated (a = b allowed); it does not cover the variant restricted to distinct pairs.
-- A fresh case-by-case audit of the full proof against the literal statement found no logical gap and repaired six documentation slips: `notes/05_audit_vs_statement.md`. The proof covers the problem as stated (a = b allowed); it does not cover the variant restricted to distinct pairs.
 
 ## Relation to JSP PR #4667
 
